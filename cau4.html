@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script>
+  // Hãy viết một chương trình để biểu diễn hình chữ nhật,
+  //         với mô tả của lớp hình tròn như sau:
+  //         Rectangle: Tên lớp
+  // - x: Toạ độ x
+  // - y: Toạ độ y
+  // -width: chiều dài
+  // - height: chiều rộng
+  // - color: Màu sắc (sử dụng max hex)
+  // + render(canvas): Hiển thị hình chữ nhật trên một canvas
+  // Hãy thực hiện các thao tác theo kịch bản sau:
+  //         Tạo một hình tròn có toạ độ 10, 10 và bán kính 100, màu viền
+  // #ff0000
+  // - Hiển thị hình chữ nhật trên một canvas bằng cách sử dụng
+  // phương thức render
+  // bên trong ngoặc tròn constructor là những thuộc tính
+  // this. thuộc tính: trỏ đên thuộc tính cần giải quyết
+  let canvas = document.getElementById("myCanvas").getContext("2d")
+
+  class Rectangle{
+    x
+    y
+    width
+    height
+    color
+    constructor(x,y,width,height,color) {
+      this.x = x
+      this.y = y
+      this.width = width
+      this.height = height
+      this.color = color
+    }
+    render(x,y,width,height,color){
+      canvas.beginPath()
+      canvas.fillStyle= color
+      canvas.fillRect(x,y,width,height)
+      canvas.stroke()
+      canvas.closePath()
+    }
+  }
+
+  canvas.beginPath()
+  canvas.fillStyle = "#ff0000"
+  canvas.arc(10, 10, 100, 0, Math.PI*2)
+  canvas.fill()
+
+
+
+  let newRactangle = new Rectangle()
+  newRactangle.render(100,100,150,100, "violet")
+</script>
+</body>
+</html>

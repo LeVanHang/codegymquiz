@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // Viết hàm insertNumberToArray() nhận vào một mảng các
+  // số nguyên, một số nguyên x, và một số nguyên vị trí
+  // index. Hàm  trả về mảng ban đầu nếu vị trí index có giá
+  // trị nhỏ hơn 0 hoặc lớn hơn chiều dài mảng. Nếu không thì
+  // // trả về mảng mới đã được thêm số x vào vị trí index.
+          function insertNumberToArray(arr,x,index){
+    if(index<0||index>arr.length){
+      return arr;
+
+    }else {
+      arr[index]=x;
+    }
+    arr.forEach(x=>{
+      document.write(arr)
+    })
+
+
+  }
+</script>
+</body>
+</html>

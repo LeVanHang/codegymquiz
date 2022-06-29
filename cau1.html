@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cho danh sách các điểm thi ở trong một mảng. Hãy viết
+    // hàm findAvg() với đầu vào là một mảng điểm và đầu ra là điểm trung bình của danh sách điẻm
+    let score=parseInt(prompt("Nhập số điểm: "))//nhập vào một thứ gì đó
+    let score=0;
+    function findAvg(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            score =score+ arr[i];
+        }
+        //arr.length: độ dài của mảng
+        return score/arr.length;
+    }
+    alert(findAvg([1,2,3]))
+
+</script>
+</body>
+</html>
